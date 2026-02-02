@@ -1,0 +1,55 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Army Fitness Ecuador – Entrena con pasión, disfruta el proceso y repite el éxito.',
+  description = 'Más que un gym, somos una comunidad. En Army Fitness Ecuador, combinamos entrenamiento funcional y mentalidad de éxito para transformar vidas. ¡Ven y vive la experiencia!',
+} = Astro.props;
+
+---
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Mobile web-app feel -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Fonts / icons si luego quieres -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+  </head>
+
+  <body class="min-h-screen bg-black text-white antialiased">
+    <!-- Contenedor tipo app móvil -->
+    <main
+      class="
+        mx-auto
+        min-h-screen
+        max-w-md
+        px-4
+        py-6
+        flex
+        flex-col
+        gap-6
+      "
+    >
+      <slot />
+    </main>
+  </body>
+</html>

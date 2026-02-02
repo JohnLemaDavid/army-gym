@@ -1,0 +1,57 @@
+---
+interface Props {
+  id?: string;
+  title?: string;
+  highlight?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  note?: string;
+}
+
+const {
+  id = "cta",
+  title = "Cupos limitados · Promo por tiempo limitado",
+  highlight = "Urgente",
+  ctaLabel = "Reservar vía WhatsApp",
+  ctaHref = "https://wa.me/0000000000?text=Quiero%20la%20promo%20de%204%20meses%20por%20100",
+  note = "Confirma hoy, bloquea el precio y agenda tu primera sesión de evaluación.",
+} = Astro.props;
+---
+
+<section
+  id={id}
+  class="rounded-3xl border border-white/15 bg-gradient-to-b from-[var(--color-primary)]/20 via-black to-black p-6 flex flex-col gap-4"
+>
+  <div class="flex items-center gap-3">
+    <div class="h-10 w-10 rounded-full bg-[var(--color-primary)]/25 border border-[var(--color-primary)]/50 flex items-center justify-center text-xl">
+      ⏳
+    </div>
+    <div>
+      <p class="text-xs uppercase tracking-[0.2em] text-white/70">{highlight}</p>
+      <p class="text-lg font-semibold">{title}</p>
+    </div>
+  </div>
+  <div class="flex flex-col gap-3">
+    <a
+      class="
+        inline-flex items-center justify-center
+        w-full
+        rounded-full
+        bg-[var(--color-primary)]
+        px-6 py-4
+        text-lg font-semibold text-white
+        shadow-lg shadow-orange-900/35
+        active:translate-y-[1px]
+        transition-transform duration-150
+      "
+      href={ctaHref}
+      target="_blank"
+      rel="noreferrer"
+    >
+      {ctaLabel}
+    </a>
+    <p class="text-xs text-white/65 text-center">
+      {note}
+    </p>
+  </div>
+</section>
