@@ -10,11 +10,11 @@ interface Props {
 }
 
 const {
-  headline = "🔥 4 MESES POR $100 🔥",
+  headline = "4 MESES\nPOR\n🔥 $100 🔥",
   subtitle = "ACCESO TOTAL AL ÁREA DE MUSCULACIÓN, CLASES GRUPALES, ZONA DE CARDIO Y CROSFFIT",
-  badge = "Army Gym · Solo móvil",
-  ctaLabel = "¡Quiero mi pase ahora!",
-  ctaHref = "#cta",
+  badge = "Army Fitness ",
+  ctaLabel = "¡Quiero inscribirme ahora!",
+  ctaHref = "https://wa.me/593983306671?text=Quiero%20la%20promo%20de%204%20meses%20por%20100",
   disclaimer = "SOLO 50 CUPOS",
   image = "/assets/imgs/Instalaciones-Principales.webp",
 } = Astro.props;
@@ -36,13 +36,13 @@ const {
   ></div>
 
   <div class="relative px-5 pt-10 pb-12 flex flex-col gap-4 text-center">
-    <p class="text-xs uppercase tracking-[0.3em] text-white/70">
+    <p class="text-md uppercase tracking-[0.3em] text-white/70">
       {badge}
     </p>
-    <h1 class="text-4xl font-bold leading-tight">
+    <h1 class="text-4xl font-bold leading-tight mb-30 whitespace-pre-line">
       {headline}
     </h1>
-    <p class="text-base text-white/80">
+    <p class="text-base font-semibold text-white/80">
       {subtitle}
     </p>
     <div class="flex flex-col gap-3 items-center">
