@@ -13,8 +13,9 @@ const {
   title = "Cupos limitados · Promo por tiempo limitado",
   highlight = "Urgente",
   ctaLabel = "Reservar vía WhatsApp",
-  ctaHref = "https://wa.me/0983306671?text=Quiero%20la%20promo%20de%204%20meses%20por%20100",
-  note = "Confirma hoy, bloquea el precio y agenda tu primera sesión de evaluación.",
+  // WhatsApp uses international format without the leading 0. Ecuador country code: 593.
+  ctaHref = "https://wa.me/593983306671?text=Quiero%20la%20promo%20de%204%20meses%20por%20100",
+  note = "Confirma hoy con este precio y agenda tu primera sesión de evaluación.",
 } = Astro.props;
 ---
 
