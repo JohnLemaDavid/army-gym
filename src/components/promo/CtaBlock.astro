@@ -20,10 +20,10 @@ const {
 
 <section
   id={id}
-  class="rounded-3xl border border-white/15 bg-gradient-to-b from-[var(--color-primary)]/20 via-black to-black p-6 flex flex-col gap-4"
+  class="rounded-3xl border border-white/15 bg-linear-to-b from-primary/20 via-black to-black p-6 flex flex-col gap-4"
 >
   <div class="flex items-center gap-3">
-    <div class="h-10 w-10 rounded-full bg-[var(--color-primary)]/25 border border-[var(--color-primary)]/50 flex items-center justify-center text-xl">
+    <div class="h-10 w-10 rounded-full bg-primary/25 border border-primary/50 flex items-center justify-center text-xl">
       ⏳
     </div>
     <div>
@@ -37,11 +37,11 @@ const {
         inline-flex items-center justify-center
         w-full
         rounded-full
-        bg-[var(--color-primary)]
+        bg-primary
         px-6 py-4
         text-lg font-semibold text-white
         shadow-lg shadow-orange-900/35
-        active:translate-y-[1px]
+        active:translate-y-px
         transition-transform duration-150
       "
       href={ctaHref}
